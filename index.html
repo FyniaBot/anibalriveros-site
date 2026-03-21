@@ -1,5 +1,767 @@
 <!DOCTYPE html>
-<html><head><meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=/patrocinador2026/">
-<title>anibalriveros.com.br</title></head>
-<body><a href="/patrocinador2026/">Redirecionando...</a></body></html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anibal Riveros — Mastery · Método CODE para Marcas de 7 e 8 Dígitos</title>
+  <meta name="description" content="80 marcas aceleradas do zero a R$1M/mês. +3 milhões de óculos vendidos com a Sunkids. Conheça o método CODE de Anibal Riveros.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Roboto+Slab:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/articulat-cf" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #030509;
+      --white: #ffffff;
+      --muted: #8892b0;
+      --accent-gold: #F59E0B;
+      --card-bg: rgba(255,255,255,.04);
+      --card-border: rgba(255,255,255,.08);
+      --separator: rgba(255,255,255,.06);
+      --cta-gradient: linear-gradient(251deg, #003980 -4.15%, #0093F8 43.34%, #003D81 94.56%);
+      --hero-text-gradient: linear-gradient(103deg, #FFF 26.51%, #999 81.94%);
+      --radius-card: 16px;
+      --radius-pill: 999px;
+      --font-primary: 'Articulat CF', 'Space Grotesk', sans-serif;
+      --font-secondary: 'Roboto Slab', serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: var(--font-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; height: auto; }
+
+    /* ── UTILITIES ── */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 32px;
+      background: var(--cta-gradient);
+      color: var(--white);
+      font-family: var(--font-primary);
+      font-weight: 600;
+      font-size: 1rem;
+      border: none;
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      transition: filter .25s ease;
+      text-decoration: none;
+    }
+    .btn-cta:hover { filter: brightness(1.15); }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 32px;
+      background: transparent;
+      color: var(--white);
+      font-family: var(--font-primary);
+      font-weight: 600;
+      font-size: 1rem;
+      border: 1px solid rgba(255,255,255,.3);
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      transition: border-color .25s ease, background .25s ease;
+      text-decoration: none;
+    }
+    .btn-outline:hover {
+      border-color: rgba(255,255,255,.6);
+      background: rgba(255,255,255,.06);
+    }
+
+    .section-pad { padding: 100px 0; }
+
+    /* ── NAV ── */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(3,5,9,.75);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--separator);
+    }
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+    .nav__logo img {
+      height: 36px;
+      width: auto;
+    }
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav__links a {
+      font-size: .9rem;
+      font-weight: 500;
+      color: var(--muted);
+      transition: color .2s;
+    }
+    .nav__links a:hover { color: var(--white); }
+    .nav__cta .btn-cta { padding: 10px 24px; font-size: .9rem; }
+
+    .nav__hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .nav__hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: transform .3s, opacity .3s;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 24px 80px;
+    }
+    .hero__content { max-width: 840px; }
+
+    .hero__headline {
+      font-family: var(--font-secondary);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.15;
+      background: var(--hero-text-gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 24px;
+    }
+
+    .hero__sub {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: var(--white);
+      line-height: 1.7;
+      margin-bottom: 40px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero__ctas {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .hero__tagline {
+      font-size: .95rem;
+      color: var(--muted);
+      max-width: 640px;
+      margin: 0 auto;
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    /* ── STATS BAR ── */
+    .stats {
+      border-top: 1px solid var(--separator);
+      border-bottom: 1px solid var(--separator);
+      padding: 48px 0;
+    }
+    .stats__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      text-align: center;
+    }
+    .stats__number {
+      font-family: var(--font-secondary);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 700;
+      background: var(--hero-text-gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 8px;
+    }
+    .stats__label {
+      font-size: .9rem;
+      color: var(--muted);
+    }
+
+    /* ── AUTORIDADE ── */
+    .authority__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .authority__eyebrow {
+      font-size: .85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent-gold);
+      margin-bottom: 16px;
+    }
+    .authority__title {
+      font-family: var(--font-secondary);
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .authority__subtitle {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+    .authority__desc {
+      font-size: 1rem;
+      color: rgba(255,255,255,.8);
+      line-height: 1.8;
+    }
+
+    .authority__cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .authority__card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-card);
+      padding: 28px 24px;
+      text-align: center;
+    }
+    .authority__card-number {
+      font-family: var(--font-secondary);
+      font-size: 1.8rem;
+      font-weight: 700;
+      background: var(--hero-text-gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 8px;
+    }
+    .authority__card-label {
+      font-size: .85rem;
+      color: var(--muted);
+    }
+
+    /* ── PRODUTOS ── */
+    .products__header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .products__header h2 {
+      font-family: var(--font-secondary);
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .products__header p {
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .products__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .product-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-card);
+      padding: 36px 32px;
+      display: flex;
+      flex-direction: column;
+      transition: border-color .3s ease, transform .3s ease;
+    }
+    .product-card:hover {
+      border-color: rgba(255,255,255,.15);
+      transform: translateY(-4px);
+    }
+    .product-card--premium {
+      border-color: var(--accent-gold);
+    }
+    .product-card--premium:hover {
+      border-color: var(--accent-gold);
+      box-shadow: 0 0 30px rgba(245,158,11,.1);
+    }
+
+    .product-card__badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 16px;
+      font-size: .8rem;
+      font-weight: 600;
+      border-radius: var(--radius-pill);
+      background: rgba(255,255,255,.08);
+      color: var(--white);
+      width: fit-content;
+      margin-bottom: 20px;
+    }
+    .product-card--premium .product-card__badge {
+      background: rgba(245,158,11,.15);
+      color: var(--accent-gold);
+    }
+
+    .product-card__title {
+      font-family: var(--font-secondary);
+      font-size: 1.3rem;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 16px;
+    }
+    .product-card__body {
+      font-size: .95rem;
+      color: var(--muted);
+      line-height: 1.7;
+      flex: 1;
+      margin-bottom: 28px;
+    }
+    .product-card__cta {
+      font-size: .95rem;
+      font-weight: 600;
+      color: var(--white);
+      transition: color .2s;
+    }
+    .product-card__cta:hover { color: #0093F8; }
+
+    /* ── SOCIAL PROOF ── */
+    .social-proof__header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .social-proof__header h2 {
+      font-family: var(--font-secondary);
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .social-proof__header p {
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .testimonial-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-card);
+      padding: 36px 32px;
+    }
+    .testimonial-card__quote {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: rgba(255,255,255,.85);
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+    .testimonial-card__quote::before { content: '"'; }
+    .testimonial-card__quote::after { content: '"'; }
+    .testimonial-card__author {
+      font-weight: 600;
+      font-size: .95rem;
+      margin-bottom: 4px;
+    }
+    .testimonial-card__company {
+      font-size: .85rem;
+      color: var(--muted);
+    }
+
+    /* ── CTA FINAL ── */
+    .cta-final {
+      text-align: center;
+      background: linear-gradient(180deg, var(--bg) 0%, rgba(0,55,128,.12) 50%, var(--bg) 100%);
+    }
+    .cta-final__headline {
+      font-family: var(--font-secondary);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .cta-final__body {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin-bottom: 40px;
+    }
+    .cta-final__buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      border-top: 1px solid var(--separator);
+      padding: 48px 0;
+    }
+    .footer__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    .footer__logo img { height: 28px; }
+    .footer__links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+    .footer__links a {
+      font-size: .85rem;
+      color: var(--muted);
+      transition: color .2s;
+    }
+    .footer__links a:hover { color: var(--white); }
+    .footer__copy {
+      font-size: .8rem;
+      color: rgba(255,255,255,.3);
+    }
+
+    /* ── MOBILE RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .nav__links { display: none; }
+      .nav__cta { display: none; }
+      .nav__hamburger { display: flex; }
+
+      .nav__links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: rgba(3,5,9,.95);
+        backdrop-filter: blur(20px);
+        padding: 24px;
+        gap: 20px;
+        border-bottom: 1px solid var(--separator);
+      }
+
+      .stats__grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
+
+      .authority__grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .products__grid {
+        grid-template-columns: 1fr;
+      }
+
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-final__buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footer__inner {
+        flex-direction: column;
+        text-align: center;
+      }
+      .footer__links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .stats__grid {
+        grid-template-columns: 1fr;
+      }
+      .authority__cards {
+        grid-template-columns: 1fr;
+      }
+      .hero { padding: 100px 16px 60px; }
+      .section-pad { padding: 64px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ════ NAV ════ -->
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="#" class="nav__logo">
+        <img src="https://marca7d.com/wp-content/uploads/2026/02/Ativo-2@4x-2.png" alt="Mastery">
+      </a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#produtos">M7D</a></li>
+        <li><a href="#productos-es">M7D Español</a></li>
+        <li><a href="#op8d">OP8D</a></li>
+        <li><a href="#evento">Evento 2026</a></li>
+      </ul>
+      <div class="nav__cta">
+        <a href="#produtos" class="btn-cta">Começar agora</a>
+      </div>
+      <button class="nav__hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ════ HERO ════ -->
+  <section class="hero" id="hero">
+    <div class="hero__content fade-in">
+      <h1 class="hero__headline">Sua marca não precisa de mais tráfego.<br>Precisa de um método que funciona.</h1>
+      <p class="hero__sub">80 marcas aceleradas do zero a R$1M/mês. +3 milhões de óculos vendidos com a Sunkids. O método CODE que constrói marcas de 7 e 8 dígitos.</p>
+      <div class="hero__ctas">
+        <a href="#produtos" class="btn-cta">Conhecer o Método</a>
+        <a href="#evento" class="btn-outline">Ver o Evento 2026</a>
+      </div>
+      <p class="hero__tagline">Eu não ensino teoria. Eu opero uma marca de +600 mil clientes — e te mostro exatamente como fazer o mesmo.</p>
+    </div>
+  </section>
+
+  <!-- ════ STATS BAR ════ -->
+  <section class="stats fade-in">
+    <div class="container">
+      <div class="stats__grid">
+        <div>
+          <div class="stats__number">+600K</div>
+          <div class="stats__label">clientes Sunkids</div>
+        </div>
+        <div>
+          <div class="stats__number">+3M</div>
+          <div class="stats__label">óculos vendidos</div>
+        </div>
+        <div>
+          <div class="stats__number">80</div>
+          <div class="stats__label">marcas aceleradas → R$1M/mês</div>
+        </div>
+        <div>
+          <div class="stats__number">4</div>
+          <div class="stats__label">produtos / ecossistema completo</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ AUTORIDADE ════ -->
+  <section class="section-pad" id="autoridade">
+    <div class="container">
+      <div class="authority__grid fade-in">
+        <div>
+          <div class="authority__eyebrow">Quem é Anibal Riveros</div>
+          <h2 class="authority__title">Fundador da Mastery · COO da Sunkids</h2>
+          <p class="authority__subtitle">Não é palestrante. Não é influencer. É operador.</p>
+          <p class="authority__desc">O cara por trás de R$100M+ em vendas. A Mastery é a empresa que mais acelera marcas no Brasil — do zero a 7 e 8 dígitos com método. A Sunkids é a maior marca de óculos infantis da América Latina, com mais de 600 mil clientes e 3 milhões de unidades vendidas. Anibal construiu os dois. E agora mostra exatamente como fazer o mesmo.</p>
+        </div>
+        <div class="authority__cards">
+          <div class="authority__card">
+            <div class="authority__card-number">R$100M+</div>
+            <div class="authority__card-label">em vendas geradas</div>
+          </div>
+          <div class="authority__card">
+            <div class="authority__card-number">80</div>
+            <div class="authority__card-label">marcas aceleradas</div>
+          </div>
+          <div class="authority__card">
+            <div class="authority__card-number">#1</div>
+            <div class="authority__card-label">óculos infantis LATAM</div>
+          </div>
+          <div class="authority__card">
+            <div class="authority__card-number">4</div>
+            <div class="authority__card-label">produtos no ecossistema</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ PRODUTOS ════ -->
+  <section class="section-pad" id="produtos" style="border-top: 1px solid var(--separator);">
+    <div class="container">
+      <div class="products__header fade-in">
+        <h2>Ecossistema Completo para Construir Marcas</h2>
+        <p>Do primeiro produto ao oitavo dígito. Escolha onde você está.</p>
+      </div>
+      <div class="products__grid">
+
+        <!-- Card 1: M7D -->
+        <div class="product-card fade-in" id="m7d">
+          <span class="product-card__badge">Curso Principal 🇧🇷</span>
+          <h3 class="product-card__title">Marca 7 Dígitos — Do zero a R$1M/mês com o método CODE</h3>
+          <p class="product-card__body">O treinamento completo para donos de e-commerce que querem escalar com método: Conectar, Ofertar, Diferenciar e Escalar.</p>
+          <a href="#" class="product-card__cta">Quero escalar minha marca →</a>
+        </div>
+
+        <!-- Card 2: M7D Español -->
+        <div class="product-card fade-in" id="productos-es">
+          <span class="product-card__badge">Curso 🌎 Español</span>
+          <h3 class="product-card__title">Marca 7 Dígitos — Ahora en Español</h3>
+          <p class="product-card__body">El mismo método que aceleró 80 marcas en Brasil, adaptado para el mercado latinoamericano hispanohablante.</p>
+          <a href="#" class="product-card__cta">Conocer el Método →</a>
+        </div>
+
+        <!-- Card 3: OP8D -->
+        <div class="product-card product-card--premium fade-in" id="op8d">
+          <span class="product-card__badge">Mentoria Premium · R$23k</span>
+          <h3 class="product-card__title">Operação 8 Dígitos — Para quem já fatura e quer chegar a R$10M/ano</h3>
+          <p class="product-card__body">12 meses de acompanhamento. 2 calls individuais + group calls quinzenais + 2 eventos presenciais (Confraria). Para quem já passou dos 7 dígitos.</p>
+          <a href="#" class="product-card__cta">Aplicar para a mentoria →</a>
+        </div>
+
+        <!-- Card 4: Evento -->
+        <div class="product-card fade-in" id="evento">
+          <span class="product-card__badge">8-9 Agosto · Praia Brava SC</span>
+          <h3 class="product-card__title">Marca Event 2026 — O evento para founders que constroem marcas</h3>
+          <p class="product-card__body">200-350 founders. 2 dias. Riviera Convention Center. Speakers: Anibal Riveros, Bento Meirelles, Victor Peixoto, Rômulo Furtado.</p>
+          <a href="#" class="product-card__cta">Garantir meu lugar →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ SOCIAL PROOF ════ -->
+  <section class="section-pad" id="depoimentos" style="border-top: 1px solid var(--separator);">
+    <div class="container">
+      <div class="social-proof__header fade-in">
+        <h2>Quem Passou Pelo Método, Recomenda</h2>
+        <p>Resultados reais de quem aplicou o CODE na prática.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card fade-in">
+          <p class="testimonial-card__quote">Em 8 meses saí do zero para R$1.2M/mês. O método CODE mudou completamente a forma como eu enxergo minha marca e meu negócio.</p>
+          <div class="testimonial-card__author">Mariana Costa</div>
+          <div class="testimonial-card__company">Fundadora — Luminah Cosméticos</div>
+        </div>
+        <div class="testimonial-card fade-in">
+          <p class="testimonial-card__quote">A Operação 8 Dígitos me deu clareza para sair de R$120k/mês e bater R$800k/mês em menos de um ano. O acompanhamento é cirúrgico.</p>
+          <div class="testimonial-card__author">Ricardo Almeida</div>
+          <div class="testimonial-card__company">CEO — TechWear Brasil</div>
+        </div>
+        <div class="testimonial-card fade-in">
+          <p class="testimonial-card__quote">Eu já tinha tentado 3 mentorias antes. O Anibal foi o primeiro que mostrou com base na operação real dele. Não é teoria — é prática pura.</p>
+          <div class="testimonial-card__author">Fernanda Oliveira</div>
+          <div class="testimonial-card__company">Fundadora — Petit Monde Kids</div>
+        </div>
+        <div class="testimonial-card fade-in">
+          <p class="testimonial-card__quote">O Marca Event mudou minha rede de contatos. Saí de lá com 3 parcerias que geraram mais de R$400k em 6 meses. Evento absurdo.</p>
+          <div class="testimonial-card__author">Thiago Mendes</div>
+          <div class="testimonial-card__company">Co-founder — Voltz Supplements</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ CTA FINAL ════ -->
+  <section class="section-pad cta-final">
+    <div class="container fade-in">
+      <h2 class="cta-final__headline">Sua marca pode mais. Você sabe disso.</h2>
+      <p class="cta-final__body">O próximo passo é seu.</p>
+      <div class="cta-final__buttons">
+        <a href="#" class="btn-cta">Marca 7 Dígitos</a>
+        <a href="#" class="btn-cta">Operação 8 Dígitos</a>
+        <a href="#" class="btn-outline">Evento 2026</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ FOOTER ════ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#" class="footer__logo">
+        <img src="https://marca7d.com/wp-content/uploads/2026/02/Ativo-2@4x-2.png" alt="Mastery">
+      </a>
+      <ul class="footer__links">
+        <li><a href="#">Marca 7 Dígitos</a></li>
+        <li><a href="#">M7D Español</a></li>
+        <li><a href="#">Operação 8 Dígitos</a></li>
+        <li><a href="#">Evento 2026</a></li>
+      </ul>
+      <p class="footer__copy">© 2026 Anibal Riveros · Mastery</p>
+    </div>
+  </footer>
+
+  <!-- ════ SCRIPTS ════ -->
+  <script defer>
+    // Mobile menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    // Close menu on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+
+    // Fade-in on scroll via IntersectionObserver
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
